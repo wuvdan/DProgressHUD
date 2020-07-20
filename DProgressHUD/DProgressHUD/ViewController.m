@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "DProgressHUD.h"
+#import "DAlertView.h"
+#import "XIBView.h"
+#import "TestAlterView.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, copy) NSArray<NSArray<NSString *> *> *items;
@@ -24,7 +27,7 @@
     self.items = [NSArray array];
     
     NSArray *contentArray = @[@"系统菊花", @"仿安卓", @"三个圆圈", @"波浪", @"自定义菊花", @"圆追随", @"风火轮", @"下载进度", @"成功", @"失败", @"图片", @"仅文字"];
-    self.items = @[contentArray, contentArray];
+    self.items = @[@[@"缩放", @"缩放 + 旋转", @"底部弹出", @"左边", @"右边"], contentArray, contentArray];
     DProgressHUD.colorHUD = [UIColor darkGrayColor];
 }
 
@@ -37,7 +40,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @[@"无文字", @"有文字"][section];
+    return @[@"弹窗广告", @"Loading-无文字", @"Loading-有文字"][section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,6 +57,55 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
+        
+        switch (indexPath.row) {
+            case 0:
+            {
+                [DAlertView showView:({
+                    TestAlterView *view = [[TestAlterView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width - 100,  (UIScreen.mainScreen.bounds.size.width - 100) * 702.0 / 567.0 )];
+                    view;
+                })];
+            }
+                break;
+            case 1:
+            {
+                 [DAlertView showView:({
+                     TestAlterView *view = [[TestAlterView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width - 100,  (UIScreen.mainScreen.bounds.size.width - 100) * 702.0 / 567.0 )];
+                    view;
+                 }) aniamtion:DAlertViewAniamtionRatationAndScale];
+            }
+                break;
+            case 2:
+            {
+                 [DAlertView showView:({
+                    TestAlterView *view = [[TestAlterView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width - 100,  (UIScreen.mainScreen.bounds.size.width - 100) * 702.0 / 567.0 )];
+                     view;
+                 }) aniamtion:DAlertViewAniamtionFromBottom];
+            }
+                break;
+            case 3:
+            {
+                 [DAlertView showView:({
+                    TestAlterView *view = [[TestAlterView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width - 100,  (UIScreen.mainScreen.bounds.size.width - 100) * 702.0 / 567.0 )];
+                     view;
+                 }) aniamtion:DAlertViewAniamtionFromLeft];
+            }
+                break;
+            case 4:
+            {
+                 [DAlertView showView:({
+                    TestAlterView *view = [[TestAlterView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width - 100,  (UIScreen.mainScreen.bounds.size.width - 100) * 702.0 / 567.0 )];
+                     view;
+                 }) aniamtion:DAlertViewAniamtionFromRight];
+            }
+                break;
+            default:
+                break;
+        }        
+        return;
+    }
+    
+    if (indexPath.section == 1) {
         switch (indexPath.row) {
                case 0: [DProgressHUD showAnimateType:(DProgressHUDAnimationSystemActivityIndicator)]; break;
                case 1: [DProgressHUD show]; break;

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4851B83024C5339F00D01945 /* DAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4851B82F24C5339F00D01945 /* DAlertView.m */; };
+		4851B83224C53C1700D01945 /* XIBView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4851B83124C53C1700D01945 /* XIBView.xib */; };
+		4851B83524C53C2400D01945 /* XIBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4851B83424C53C2400D01945 /* XIBView.m */; };
+		4851B83824C5471100D01945 /* TestAlterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4851B83724C5471100D01945 /* TestAlterView.m */; };
+		4851B83B24C567EA00D01945 /* DAlertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4851B83A24C567EA00D01945 /* DAlertModel.m */; };
 		486B077E24BFEEB000BF55AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 486B077D24BFEEB000BF55AC /* AppDelegate.m */; };
 		486B078124BFEEB000BF55AC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 486B078024BFEEB000BF55AC /* SceneDelegate.m */; };
 		486B078424BFEEB000BF55AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 486B078324BFEEB000BF55AC /* ViewController.m */; };
@@ -19,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4851B82E24C5339F00D01945 /* DAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAlertView.h; sourceTree = "<group>"; };
+		4851B82F24C5339F00D01945 /* DAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAlertView.m; sourceTree = "<group>"; };
+		4851B83124C53C1700D01945 /* XIBView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBView.xib; sourceTree = "<group>"; };
+		4851B83324C53C2400D01945 /* XIBView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XIBView.h; sourceTree = "<group>"; };
+		4851B83424C53C2400D01945 /* XIBView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XIBView.m; sourceTree = "<group>"; };
+		4851B83624C5471100D01945 /* TestAlterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAlterView.h; sourceTree = "<group>"; };
+		4851B83724C5471100D01945 /* TestAlterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAlterView.m; sourceTree = "<group>"; };
+		4851B83924C567EA00D01945 /* DAlertModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAlertModel.h; sourceTree = "<group>"; };
+		4851B83A24C567EA00D01945 /* DAlertModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAlertModel.m; sourceTree = "<group>"; };
 		486B077924BFEEB000BF55AC /* DProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		486B077C24BFEEB000BF55AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		486B077D24BFEEB000BF55AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,8 +89,17 @@
 				486B078324BFEEB000BF55AC /* ViewController.m */,
 				486B079524BFEEEF00BF55AC /* DProgressHUD.h */,
 				486B079624BFEEEF00BF55AC /* DProgressHUD.m */,
+				4851B83924C567EA00D01945 /* DAlertModel.h */,
+				4851B83A24C567EA00D01945 /* DAlertModel.m */,
+				4851B82E24C5339F00D01945 /* DAlertView.h */,
+				4851B82F24C5339F00D01945 /* DAlertView.m */,
 				4895946F24C18AA100DD6728 /* TextFiledViewController.h */,
 				4895947024C18AA100DD6728 /* TextFiledViewController.m */,
+				4851B83624C5471100D01945 /* TestAlterView.h */,
+				4851B83724C5471100D01945 /* TestAlterView.m */,
+				4851B83324C53C2400D01945 /* XIBView.h */,
+				4851B83424C53C2400D01945 /* XIBView.m */,
+				4851B83124C53C1700D01945 /* XIBView.xib */,
 				486B078524BFEEB000BF55AC /* Main.storyboard */,
 				486B078824BFEEB100BF55AC /* Assets.xcassets */,
 				486B078A24BFEEB100BF55AC /* LaunchScreen.storyboard */,
@@ -145,6 +168,7 @@
 			files = (
 				486B078C24BFEEB100BF55AC /* LaunchScreen.storyboard in Resources */,
 				486B078924BFEEB100BF55AC /* Assets.xcassets in Resources */,
+				4851B83224C53C1700D01945 /* XIBView.xib in Resources */,
 				486B078724BFEEB000BF55AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,12 +180,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4851B83024C5339F00D01945 /* DAlertView.m in Sources */,
 				4895947124C18AA100DD6728 /* TextFiledViewController.m in Sources */,
+				4851B83524C53C2400D01945 /* XIBView.m in Sources */,
 				486B078424BFEEB000BF55AC /* ViewController.m in Sources */,
 				486B077E24BFEEB000BF55AC /* AppDelegate.m in Sources */,
+				4851B83B24C567EA00D01945 /* DAlertModel.m in Sources */,
 				486B078F24BFEEB100BF55AC /* main.m in Sources */,
 				486B078124BFEEB000BF55AC /* SceneDelegate.m in Sources */,
 				486B079724BFEEEF00BF55AC /* DProgressHUD.m in Sources */,
+				4851B83824C5471100D01945 /* TestAlterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
